@@ -13,6 +13,19 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    fontFamily: {
+      body: ["Andada Pro", "serif"],
+      sans: ["ui-sans-serif", "system-ui"],
+    },
   },
-  plugins: [],
+  variants: {
+    extend: {},
+    scrollbar: ["rounded"],
+  },
+  plugins: [
+    require("tailwind-scrollbar-hide"),
+    require("@tailwindcss/forms"),
+    require("tailwind-scrollbar"),
+  ],
+
 }
