@@ -1,5 +1,6 @@
 import NextAuth from "next-auth";
 import SpotifyProvider from "next-auth/providers/spotify";
+import fetch from "node-fetch";
 
 const scopes = [
   "user-read-email",
@@ -24,7 +25,28 @@ const LOGIN_URL =
   new URLSearchParams(params).toString();
 
 async function refreshAccessToken(token) {
-  const response = await fetch 
+  const params = new URLSearchParams();
+  params.append("grant_type", "refresh_token");
+  params.append("refresh_token", token.refreshToken);
+  const response = await fetch("https://accounts.spotify.com/api/token", {
+    method: "POST",
+    headers: {
+      Authorization:
+        "Basic " +
+        new Buffer.from(
+          process.env.SPOTIFY_CLIENT_ID +
+            ":" +
+            process.env.SPOTIFY_CLIENT_SECRET
+        ).toString("base64"),
+    },
+    body: params,
+  });
+  const data = await response.json();
+  return {
+    accessToken: data.access_token,
+    refreshToken: data.refresh_token ?? token.refreshToken,
+    accessTokenExpires: Date.now() + data.expires_in * 1000,
+  };
 }
 
 export const authOptions = {
