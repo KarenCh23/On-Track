@@ -12,9 +12,9 @@ export default function Search({search, setSearch}) {
   
         <div className="flex items-center">
           <div className="flex space-x-2">
-            <buttons className="tag">Minimal</buttons>
-            <buttons className="tag">House</buttons>
-            <buttons className="tag">Chill</buttons>
+            <button className="tag">Minimal</button>
+            <button className="tag">House</button>
+            <button className="tag">Chill</button>
           </div>
         </div>
       </div>

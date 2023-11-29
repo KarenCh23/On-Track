@@ -3,12 +3,12 @@ import Body from "./Body";
 import Right from "./Right";
 import Sidebar from "./Sidebar";
 
-function Dashboard() {
+function Dashboard({playlists, setPlaylists, sessionState}) {
   
     return (
       <main>
         <Sidebar />
-        <Body  />
+        <Body playlists={playlists} setPlaylists={setPlaylists} sessionState={sessionState}/>
         <Right />
 
       </main>

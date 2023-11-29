@@ -8,7 +8,7 @@ export default function Home() {
   const { data: session } = useSession();
   const [sessionState, setSessionState] = useState("");
   const [playlists, setPlaylists] = useState([]);
-  // console.log(session.user.accessToken)
+  
 
   useEffect(() => {
     async function sessionToken() {
@@ -36,13 +36,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div className="bg-white p-7">access token: {sessionState}</div>
-      <div className="bg-white p-10 flex flex-col items-center w-full">
+      {/* <div className="bg-white p-10 flex flex-col items-center w-full">
         {playlists.map((playlist) => (
           <div key={playlist.id}>{playlist.name}</div>
         ))}
-      </div>
+      </div> */}
 
-      <Dashboard />
+      <Dashboard playlists={playlists} setPlaylists={setPlaylists} sessionState={sessionState} />
     </div>
   );
 }
