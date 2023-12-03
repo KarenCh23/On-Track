@@ -25,7 +25,7 @@ export default function Body({ playlists, sessionState, spotifyApi }) {
         res.body.tracks.items.map((track) => {
           return {
             id: track.id,
-            artist: track.artist[0].name,
+            artist: track.artists[0].name,
             title: track.name,
             uri: track.uri,
             albumUrl: track.album.images[0].url,
