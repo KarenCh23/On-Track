@@ -1,5 +1,5 @@
 // "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Search from "./Search";
 import { useSession } from "next-auth/react";
 
@@ -7,8 +7,13 @@ export default function Body({playlists, setPlaylists, sessionState}) {
 
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [newReleases, setNewReleases] = useState([]);
  const accessToken = sessionState;
 //  console.log(accessToken);
+
+useEffect(() => {
+ if (!accessToken) return;
+}, [])
 
   return (
     <section className="bg-black ml-24 py-4 space-y-8 md:max-w-6xl flex-grow md:mr-2.5">

@@ -3,6 +3,8 @@ import Body from "./Body";
 import Right from "./Right";
 import Sidebar from "./Sidebar";
 
+const spotifyApi = new SpotifyWebApi
+
 function Dashboard({playlists, setPlaylists, sessionState}) {
   
     return (
