@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Search from "./Search";
 import { useSession } from "next-auth/react";
 
-export default function Body({playlists, setPlaylists, sessionState}) {
+export default function Body({playlists, sessionState, spotifyApi}) {
 
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
