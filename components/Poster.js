@@ -1,4 +1,4 @@
-import {BsFillPauseFill, BsFillPlayFill} from "react-icons/bs";
+import { BsFillPauseFill, BsFillPlayFill } from "react-icons/bs";
 
 export default function Poster({ track }) {
   return (
@@ -10,8 +10,9 @@ export default function Poster({ track }) {
       />
 
       <div className="absolute bottom-10 insext-x-0 ml-4 flex items-center space-x-3.5">
-        <div className="h-10 w-10 bg-[#1e1f20] rounded-full flex items-center justify-center">
-            < BsFillPauseFill className="text-xl "/>
+        <div className="h-10 w-10 bg-[#1e1f20] rounded-full flex items-center justify-center group-hover:bg-[#b5bbb7] flex-shrink-0">
+          {/* <BsFillPauseFill className="text-xl" /> */}
+          <BsFillPlayFill className="text-xl ml-[1px]" />
         </div>
       </div>
     </div>
