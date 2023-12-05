@@ -15,7 +15,7 @@ export default function Poster({ track, chooseTrack }) {
   };
 
   return (
-    <div
+    <article
       className="w-[260px] h-[360px] rounded-[50px] overflow-hidden relative text-white/80 cursor-pointer hover:scale-105 hover:text-white/100 transition duration-200 ease-out group mx-auto"
       onClick={handlePlay}
     >
@@ -33,7 +33,11 @@ export default function Poster({ track, chooseTrack }) {
             <BsFillPlayFill className="text-xl ml-[1px]" />
           )}
         </div>
+        <div className="text-[15px]">
+          <h4 className="font-extrabold truncate w-44">{track.title}</h4>
+          <h6>{track.artist}</h6>
+        </div>
       </div>
-    </div>
+    </article>
   );
 }
