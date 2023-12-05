@@ -4,7 +4,7 @@ import Search from "./Search";
 import { useSession } from "next-auth/react";
 import Poster from "./Poster";
 
-export default function Body({ playlists, sessionState, spotifyApi }) {
+export default function Body({ playlists, sessionState, spotifyApi, chooseTrack }) {
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [newReleases, setNewReleases] = useState([]);
@@ -68,13 +68,13 @@ export default function Body({ playlists, sessionState, spotifyApi }) {
           <Poster 
           key={track.id} 
           track={track} 
-          // chooseTrack={chooseTrack} 
+          chooseTrack={chooseTrack} 
           />
         )) :  searchResults.slice(0,4).map((track) => (
           <Poster 
           key={track.id} 
           track={track} 
-          // chooseTrack={chooseTrack} 
+          chooseTrack={chooseTrack} 
           />
         ) )}
       </div>
