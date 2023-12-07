@@ -123,7 +123,7 @@ export default function Body({
         {/* TRACKS */}
         <div>
           <h2 className="text-white font-bold mb-3 pl-1">
-            {searchResults.length === 0 ? "New Releases" : "Tracks"}
+            {searchResults.length === 0 ? "New Releases" : "Searched Tracks"}
           </h2>
           <div className="space-y-3 border-2 border-[#262626] rounded-2xl p-3 bg-[#0D0D0D] overflow-y-scroll h-[1000px] md:h-[38vh] scrollbar-thin scrollbar-thumb-gray-600 scrollbar-thumb-rounded
           hover:scrollbar-thumb-gray-500 w-[830px]">

@@ -32,7 +32,7 @@ async function refreshAccessToken(token) {
         ...token,
         accessToken: data.access_token,
         refreshToken: data.refresh_token ?? token.refreshToken,
-        accessTokenExpires: Date.now() + data.expires_in * 1000
+        accessTokenExpires: Date.now() + data.expires_in * 3000
     }
 }
 
