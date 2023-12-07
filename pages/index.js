@@ -35,13 +35,7 @@ export default function Home() {
         <title>On Track - Dashboard</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <div className="bg-white p-7">access token: {sessionState}</div>
-      {/* <div className="bg-white p-10 flex flex-col items-center w-full">
-        {playlists.map((playlist) => (
-          <div key={playlist.id}>{playlist.name}</div>
-        ))}
-      </div> */}
-
+      {/* <div className="bg-white p-7">access token: {sessionState}</div> */}
       <Dashboard playlists={playlists} setPlaylists={setPlaylists} sessionState={sessionState} />
     </div>
   );

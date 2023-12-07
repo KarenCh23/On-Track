@@ -5,7 +5,7 @@ export const playState = atom ({
     default: false,
 });
 
-export const playingTrackState = atom({
+export const playingTrackState = atom ({
     key: "playingTrackstate",
     default: "",
 })
