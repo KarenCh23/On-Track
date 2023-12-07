@@ -18,14 +18,15 @@ module.exports = {
       sans: ["ui-sans-serif", "system-ui"],
     },
   },
+
+  plugins: [
+    require("tailwind-scrollbar-hide"),
+    require("@tailwindcss/forms"),
+    require("tailwind-scrollbar")({ nocompatible: true }),
+  ],
   variants: {
     extend: {},
     scrollbar: ["rounded"],
   },
-  plugins: [
-    require("tailwind-scrollbar-hide"),
-    require("@tailwindcss/forms"),
-    require("tailwind-scrollbar"),
-  ],
 
 }
