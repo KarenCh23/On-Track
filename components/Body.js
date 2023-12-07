@@ -110,7 +110,7 @@ export default function Body({
       <section className="flex gap-x-8 absolute min-w-full md:relative ml-6">
         {/* GENRES */}
         <div className="hidden xl:inline max-w-[270px]">
-          <h2 className="text-white font-bold mb-3">Genres</h2>
+          <h2 className="text-white font-bold mb-3 pl-1">Genres</h2>
           <div className="flex gap-x-2 gap-y-2.5 flex-wrap mb-3">
             {musicGenres.map((genre) => (
               <div className="genre" key={genre.id}>
@@ -122,10 +122,10 @@ export default function Body({
 
         {/* TRACKS */}
         <div>
-          <h2 className="text-white font-bold mb-3">
+          <h2 className="text-white font-bold mb-3 pl-1">
             {searchResults.length === 0 ? "New Releases" : "Tracks"}
           </h2>
-          <div className="space-y-3 border-2 border-[#262626] rounded-2xl p-3 bg-[#0D0D0D] overflow-y-scroll h-[1000px] md:h-96 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-thumb-rounded
+          <div className="space-y-3 border-2 border-[#262626] rounded-2xl p-3 bg-[#0D0D0D] overflow-y-scroll h-[1000px] md:h-[38vh] scrollbar-thin scrollbar-thumb-gray-600 scrollbar-thumb-rounded
           hover:scrollbar-thumb-gray-500 w-[830px]">
             {searchResults.length === 0
               ? newReleases
